@@ -10,7 +10,6 @@ os.chdir(os.path.expanduser('~')+"/os_lab_0")
 file = open("sander1.txt", "w") 
 file = open("sander2.txt", "w") 
 file = open("sander3.py", "w") 
-file.write("SANDER Yazıcıoglu") 
 file.close() 
 
 #print all files last modified date in the folder.
