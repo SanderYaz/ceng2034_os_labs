@@ -5,6 +5,7 @@ import os,sys
 os.system('mkdir /chroot')
 os.system('mkdir /chroot/bin')
 os.chdir ('/chroot')
+chroot ="/chroot"
 os.system('mkdir bin dev etc home  home/prisoner lib lib64 var usr usr/bin')
 
 #copy bash file
@@ -24,8 +25,12 @@ os.system ('sudo cp /lib/x86_64-linux-gnu/libutil.so.1 /chroot/lib/x86_64-linux-
 os.system ('sudo cp /lib/x86_64-linux-gnu/libexpat.so.1 /chroot/lib/x86_64-linux-gnu')
 os.system ('sudo cp /lib/x86_64-linux-gnu/libz.so.1 /chroot/lib/x86_64-linux-gnu')
 os.system ('sudo cp /lib/x86_64-linux-gnu/libm.so.6 /chroot/lib/x86_64-linux-gnu')
-
-os.system ('sudo chroot /chroot /bin/bash')
-
-
+os.chdir (chroot)
+file = open("sander.py", "w") 
+file.write("print ('Hello World')") 
+file.close()
+os.chroot(chroot)
+#os.system ('sudo chroot /chroot /bin/bash')
+print(os.getcwd()) #Check chroot
+os.chroot(python3 /sander.py) #Doesn't Work
 
