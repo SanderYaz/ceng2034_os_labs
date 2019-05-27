@@ -31,6 +31,6 @@ file.write("print ('Hello World')")
 file.close()
 os.chroot(chroot)
 #os.system ('sudo chroot /chroot /bin/bash')
-print(os.getcwd()) #Check chroot
+os.chroot(os.getcwd()) #Check chroot
 os.chroot(python3 /sander.py) #Doesn't Work
 
